@@ -4,8 +4,10 @@
     <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
   </mat-card-header>
 
+  <img mat-card-image [src]="hero | heroImage" alt="{{ hero.superhero }}">
+
   <mat-card-content class="mt-2">
-    <mat-card-title>{{ hero.publisher }}</mat-card-title>
+    <b><p>{{ hero.publisher }}</p></b>
     <p>
       <strong>Primera aparición</strong> {{hero.first_appearance}}
       <br>
