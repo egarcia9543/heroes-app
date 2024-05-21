@@ -14,4 +14,8 @@ export class HeroesService {
   getHeroes(): Observable<Hero[]> {
     return this.httpClient.get<Hero[]>(`${this.baseUrl}/heroes`);
   }
+
+  getHeroById(id: string): Observable<Hero | undefined> {
+    return this.httpClient.get<Hero>(`${this.baseUrl}/heroes/${id}`)
+  }
 }
