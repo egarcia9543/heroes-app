@@ -13,21 +13,10 @@ export class HeroesInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
     return next.handle(req).pipe(
       catchError((error: HttpErrorResponse) => {
-        if (error) {
-          switch (error.status) {
-            case 404:
-              console.error('Not found');
-              return this.router.navigateByUrl('heroes/list')
-            case 500:
-              console.error('Internal server error');
-              return this.router.navigateByUrl('heroes/list')
-            default:
-              console.error('Unknown error');
-              return this.router.navigateByUrl('heroes/list')
-          }
-        }
-        return throwError(error);
+        console.log(error.status, error.message)
+        return this.router.navigateByUrl('heroes/list')
       })
     )
   }
 }
+;

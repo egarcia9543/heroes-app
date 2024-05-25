@@ -1,1 +1,37 @@
-<p>hero-page works!</p>
+<div *ngIf="!hero" class="loading">
+</div>
+
+<div *ngIf="hero" class="hero_card">
+  <mat-card class="col-12 sm:col-6">
+    <div class="flex flex-row justify-content-between align-items-center">
+      <h2>
+        {{hero.superhero}}
+      </h2>
+      <h3>
+        {{hero.alter_ego}}
+      </h3>
+    </div>
+
+    <img [src]="hero | heroImage" [alt]="hero.superhero" mat-card-image>
+  </mat-card>
+  <mat-card class="col-12 sm:col-6">
+    <mat-card-header>
+      <mat-card-title>Información</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>{{ hero.first_appearance }}</mat-list-item>
+        <mat-list-item>{{ hero.characters }}</mat-list-item>
+        <mat-list-item>{{ hero.publisher }}</mat-list-item>
+      </mat-list>
+    </mat-card-content>
+
+    <button
+    mat-button
+    color="warn"
+    (click)="goHome()">
+    Ver lista
+    </button>
+  </mat-card>
+</div>

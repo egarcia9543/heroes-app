@@ -1,0 +1,23 @@
+.loading {
+  background: linear-gradient(90deg, lightgray 40%, white 50%, lightgray 60%);
+  background-size: 300%;
+  background-position-x: 100%;
+  animation: shimmer 1s infinite linear;
+  border-radius: 8px;
+  cursor: wait;
+  height: 90vh;
+  margin: 10px;
+  display: grid;
+  place-content: center;
+}
+
+.hero_card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: 0%
+  }
+}
