@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "usuario": "John Doe",
       "email": "john.due@gmail.com"
     }
@@ -11,7 +11,7 @@
       "id": "dc-batman",
       "superhero": "Batman",
       "publisher": "DC Comics",
-      "alter_ego": "Bruce Wayne",
+      "alter_ego": "Bruce motherfucking wayne",
       "first_appearance": "Detective Comics #27",
       "characters": "Bruce Wayne"
     },
@@ -166,6 +166,42 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "",
+      "superhero": "Fernando",
+      "publisher": "DC Comics",
+      "alter_ego": "Alonso",
+      "first_appearance": "2019",
+      "characters": "Nano",
+      "alt_img": ""
+    },
+    {
+      "id": "",
+      "superhero": "Groot",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Arbol que habla",
+      "first_appearance": "no se",
+      "characters": "Vin diesel",
+      "alt_img": "https://static.wikia.nocookie.net/characterprofile/images/4/45/Groot_GG_FH.png/revision/latest/scale-to-width-down/700?cb=20190125132241"
+    },
+    {
+      "id": "",
+      "superhero": "a",
+      "publisher": "DC Comics",
+      "alter_ego": "a",
+      "first_appearance": "a",
+      "characters": "a",
+      "alt_img": "https://i.pinimg.com/474x/11/7e/d1/117ed1f8bc3bd952241f883c2ef75163.jpg"
+    },
+    {
+      "id": "",
+      "superhero": "a",
+      "publisher": "DC Comics",
+      "alter_ego": "a",
+      "first_appearance": "a",
+      "characters": "a",
+      "alt_img": "https://i.pinimg.com/474x/11/7e/d1/https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_640.jpg.jpg"
     }
   ]
 }
