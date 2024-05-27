@@ -1,4 +1,5 @@
-<h1>Editar / Agregar Héroe</h1>
+<h1 *ngIf="isEditing">Pantalla de edición</h1>
+<h1 *ngIf="!isEditing">Agregar héroe</h1>
 <mat-divider class="mb-2"></mat-divider>
 
 <div class="grid">
@@ -40,7 +41,7 @@
         </form>
 
         <div class="flex justify-content-between">
-          <button mat-flat-button color="warn">Borrar</button>
+          <button *ngIf="isEditing" mat-flat-button color="warn">Borrar</button>
           <button mat-flat-button color="primary" (click)="onSubmit()">Guardar</button>
         </div>
 
@@ -53,6 +54,4 @@
       <img [src]="currentHero| heroImage" mat-card-image>
     </mat-card>
   </div>
-
-  <pre>{{currentHero | json}}</pre>
 </div>

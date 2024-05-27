@@ -9,11 +9,12 @@
   "heroes": [
     {
       "id": "dc-batman",
-      "superhero": "Batman",
+      "superhero": "Venom",
       "publisher": "DC Comics",
-      "alter_ego": "Bruce motherfucking wayne",
+      "alter_ego": "Eddie brock",
       "first_appearance": "Detective Comics #27",
-      "characters": "Bruce Wayne"
+      "characters": "Bruce Wayne",
+      "alt_image": "https://i.pinimg.com/236x/91/e0/7d/91e07dc7927b5799886ef683566443a0.jpg"
     },
     {
       "id": "dc-superman",
