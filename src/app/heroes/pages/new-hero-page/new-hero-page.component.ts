@@ -4,6 +4,8 @@ import { Hero, Publisher } from '../../interfaces/hero.interfaces';
 import { HeroesService } from '../../services/heroes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-new-hero-page',
@@ -30,7 +32,8 @@ export class NewHeroPageComponent implements OnInit {
   constructor(private heroesSrv: HeroesService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private dialog: MatDialog
   ) { };
 
   ngOnInit(): void {
@@ -78,6 +81,24 @@ export class NewHeroPageComponent implements OnInit {
         this.showSnackbar(`Excelente, ${hero.superhero} ha sido agregado correctamente`);
         this.router.navigateByUrl(`/heroes/edit/${hero.id}`);
       })
+  }
+
+  confirmDialog() {
+    if(!this.currentHero.id) this.showSnackbar('El id del héroe es obligatorio');
+
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: this.heroForm.value
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(!result) return;
+
+      this.heroesSrv.deleteHeroById(this.currentHero.id)
+        .subscribe(() => {
+          this.showSnackbar(`El héroe ${this.currentHero.superhero} ha sido eliminado correctamente`);
+          this.router.navigateByUrl('/heroes');
+        })
+    })
   }
 
   showSnackbar(message: string): void {
