@@ -23,7 +23,8 @@
     </button>
 
     <span class="spacer"></span>
-      <button mat-button>
+    <p>{{loggedUser?.usuario}}</p>
+      <button mat-button (click)="onLogout()">
         Cerrar sesión
         <mat-icon>logout</mat-icon>
       </button>
